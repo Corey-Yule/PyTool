@@ -1,6 +1,6 @@
 import requests as r
 import os
-import json
+import time
 
 logo = """
 
@@ -20,6 +20,9 @@ logo = """
 \n
 """
 
+taskManagerPath = "Storage/TaskManager.py"
+requestTestingPath = "Storage/requestPuller.py"
+
 while True:
     print(logo)
     print("\033[38;2;0;128;225m[1] Task Manager \033[0m")
@@ -29,5 +32,20 @@ while True:
     x = input("option: ")
 
     if x == "3":
+        time.sleep(0.3)
+        print("Exiting.")
+        time.sleep(0.3)
+        print("Exiting..")
+        time.sleep(0.3)
+        print("Exiting...")
         break
-   
+    elif x == "1":
+        if os.path.isfile(taskManagerPath):
+            os.system(f"python3 {taskManagerPath}")
+        else:
+            print("Error: TaskManager.py not found")
+    elif x == "2":
+        if os.path.isfile(requestTestingPath):
+            os.system(f"python3 {requestTestingPath}")
+        else:
+            print("Error: requestPuller.py not found")
