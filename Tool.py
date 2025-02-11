@@ -20,8 +20,8 @@ logo = """
 \n
 """
 
-taskManagerPath = "Storage/TaskManager.py"
-requestTestingPath = "Storage/requestPuller.py"
+taskManagerPath = "Storage/taskManager.py"
+requestTestingPath = "Storage/RequestPuller.py"
 
 while True:
     print(logo)
